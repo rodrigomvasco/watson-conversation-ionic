@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Watson Conversation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let msg of mensagens" [attr.class]="msg.isWatson ? 'msgWatson' : 'msgUsuario'">
+    <p class="msgRemetente">{{msg.isWatson ? 'Watson:' : 'Você:'}}</p>
+    <p class="msgEnviada">{{msg.mensagem}}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input type="text" placeholder="Digite sua mensagem..." [(ngModel)]="mensagem"></ion-input>
+    <ion-buttons end>
+      <button ion-button color="primary" (click)="enviarMensagem()">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

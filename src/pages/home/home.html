@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Watson Conversation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="login">
+    <img src="assets/img/watson.png" />
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="nome"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button color="primary" block (click)="entrar()">Entrar</button>
+  </div>
+
+</ion-content>
